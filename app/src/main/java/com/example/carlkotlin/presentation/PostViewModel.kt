@@ -39,7 +39,7 @@ class PostViewModel @Inject constructor(private val repository: PostRepository) 
     fun updatePost(id: String, title: String, content: String) {
         viewModelScope.launch {
             repository.updatePost(id, title, content)
-            getPost(id) // Refresh current post
+            getPost(id)
         }
     }
 

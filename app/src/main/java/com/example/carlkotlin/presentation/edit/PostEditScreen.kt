@@ -40,10 +40,7 @@ fun PostEditScreen(navController: NavController, viewModel: PostViewModel, postI
     LaunchedEffect(postId) {
         if (postId != null && postId.isNotEmpty()) {
             viewModel.getPost(postId)
-        } else {
-            // New post mode, clear fields or ensure empty if ViewModel holds state
-            // But we use local state 'title' and 'content' initialized to empty.
-        }
+        } else {}
     }
 
     LaunchedEffect(currentPost) {
